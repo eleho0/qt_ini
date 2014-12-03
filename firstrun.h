@@ -21,6 +21,7 @@ private slots:
     void ha_dialog();
     void btnl1();
     void btnl2();
+    void gl_btn_click();
 
     
 private:

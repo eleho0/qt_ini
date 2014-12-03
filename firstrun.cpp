@@ -8,11 +8,29 @@ Firstrun::Firstrun(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    //去焦点
+    ui->do_button->setFocusPolicy(Qt::NoFocus);
+    ui->re_button->setFocusPolicy(Qt::NoFocus);
+    ui->mi_button->setFocusPolicy(Qt::NoFocus);
+    ui->fa_button->setFocusPolicy(Qt::NoFocus);
+    ui->so_button->setFocusPolicy(Qt::NoFocus);
+    ui->la_button->setFocusPolicy(Qt::NoFocus);
+    ui->si_button->setFocusPolicy(Qt::NoFocus);
+
+
     connect(ui->pushButton_hide, SIGNAL(clicked()), this, SLOT(hide_label()));
     connect(ui->pushButton_show, SIGNAL(clicked()), this, SLOT(show_label()));
     connect(ui->pushButton_ha,SIGNAL(clicked()),this,SLOT(ha_dialog()));
     connect(ui->btn1,SIGNAL(clicked()),this,SLOT(btnl1()));
     connect(ui->btn2,SIGNAL(clicked()),this,SLOT(btnl2()));
+
+    connect(ui->do_button,SIGNAL(clicked()), SLOT(gl_btn_click()));
+    connect(ui->re_button,SIGNAL(clicked()), SLOT(gl_btn_click()));
+    connect(ui->mi_button,SIGNAL(clicked()), SLOT(gl_btn_click()));
+    connect(ui->fa_button,SIGNAL(clicked()), SLOT(gl_btn_click()));
+    connect(ui->so_button,SIGNAL(clicked()), SLOT(gl_btn_click()));
+    connect(ui->la_button,SIGNAL(clicked()), SLOT(gl_btn_click()));
+    connect(ui->si_button,SIGNAL(clicked()), SLOT(gl_btn_click()));
 }
 
 Firstrun::~Firstrun()
@@ -108,6 +126,21 @@ void Firstrun::btnl2()
     default:
         flag2 = 0;
         break;
+    }
+}
+
+void Firstrun::gl_btn_click()
+{
+    QWidget* curr_widget = this->focusWidget();
+
+    if(curr_widget->inherits("QLineEdit")){
+
+
+        QPushButton* anci_PB = dynamic_cast<QPushButton*>(sender());
+        QString str = anci_PB->text();
+
+        QLineEdit *curr_le = static_cast<QLineEdit*>(curr_widget);
+        curr_le->insert(str);
     }
 }
 
