@@ -19,10 +19,15 @@ private slots:
     void show_label();
     void hide_label();
     void ha_dialog();
+    void btnl1();
+    void btnl2();
+
     
 private:
 
     Ui::Firstrun *ui;
+    int flag1, flag2;
+    void setbgcolor(QWidget *w, int r, int g, int b);
 };
 
 #endif // FIRSTRUN_H
