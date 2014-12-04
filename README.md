@@ -1,4 +1,6 @@
-qt_ini
-======
+my qt test
+===========================================
 
-ini test
+.. from: arm
+
+about focusWidget button QSettings label
