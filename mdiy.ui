@@ -13,97 +13,213 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit_fruit">
+  <property name="styleSheet">
+   <string notr="true">#mDou{
+background: gray;
+}
+
+#ha_frame {
+border: 3px solid gray;
+border-radius: 40px;
+background: white;
+background: QLinearGradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #eef, stop: 1 #ccf);
+}
+
+QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 2px solid gray;
+border-radius: 8px;
+}
+
+#pushButton_ok, #pushButton_exit {
+color: white;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+border-width: 1px;
+border-color: #339;
+border-style: solid;
+border-radius: 7;
+padding: 3px;
+font-size: 10px;
+padding-left: 5px;
+padding-right: 5px;
+min-width: 50px;
+max-width: 50px;
+min-height: 13px;
+max-height: 13px;
+}
+
+
+QLabel {
+font-weight: bold;
+font-size: 15px;
+}
+
+</string>
+  </property>
+  <widget class="QFrame" name="ha_frame">
    <property name="geometry">
     <rect>
-     <x>142</x>
-     <y>13</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_editor">
-   <property name="geometry">
-    <rect>
-     <x>142</x>
-     <y>53</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>20</y>
-     <width>91</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>最喜欢水果</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>50</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>最喜欢编辑器</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_ok">
-   <property name="geometry">
-    <rect>
-     <x>34</x>
-     <y>90</y>
-     <width>111</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&amp;ok</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_exit">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>90</y>
-     <width>101</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&amp;Exit</string>
-   </property>
-  </widget>
-  <widget class="QCalendarWidget" name="calendarWidget">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
+     <x>20</x>
      <y>10</y>
-     <width>248</width>
-     <height>157</height>
+     <width>541</width>
+     <height>341</height>
     </rect>
    </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>46</x>
+      <y>30</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>最喜欢水果</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_1521">
+    <property name="geometry">
+     <rect>
+      <x>156</x>
+      <y>200</y>
+      <width>62</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1521</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>36</x>
+      <y>60</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>最喜欢编辑器</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_exit">
+    <property name="geometry">
+     <rect>
+      <x>286</x>
+      <y>230</y>
+      <width>62</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;exit</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_editor">
+    <property name="geometry">
+     <rect>
+      <x>148</x>
+      <y>63</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_2822">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>290</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2822</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ok">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>100</y>
+      <width>62</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;ok</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_9527">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>200</y>
+      <width>62</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>9527</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_fruit">
+    <property name="geometry">
+     <rect>
+      <x>148</x>
+      <y>23</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_exit">
+    <property name="geometry">
+     <rect>
+      <x>156</x>
+      <y>100</y>
+      <width>62</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Exit</string>
+    </property>
+   </widget>
+   <widget class="QCalendarWidget" name="calendarWidget">
+    <property name="geometry">
+     <rect>
+      <x>266</x>
+      <y>20</y>
+      <width>248</width>
+      <height>157</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
@@ -121,6 +237,22 @@
     <hint type="destinationlabel">
      <x>513</x>
      <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>mDiy</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>257</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>347</x>
+     <y>321</y>
     </hint>
    </hints>
   </connection>
